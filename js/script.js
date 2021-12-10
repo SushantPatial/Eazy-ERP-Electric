@@ -1,3 +1,6 @@
+/*---=== AOS ===---*/
+AOS.init();
+
 /*---=== Navbar on scroll ===---*/
 $(window).scroll(function() {
   if ($(window).scrollTop() > 47) {
@@ -20,3 +23,29 @@ if ($(window).width() < 992) {
   $("header .nav-link").css("color", "#333");
   $("header .nav-link").css("padding", "12px");
 }
+
+/*---=== Stats section ===---*/
+$(window).scroll(function() {
+  let hT = $('#stats-section').offset().top,
+    hH = $('#stats-section').outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+  if (wS > (hT+hH-wH - 200)){
+    $('.counting').each(function() {
+      var $this = $(this),
+          countTo = $this.attr('data-count');
+      $({ countNum: $this.text()}).animate({
+        countNum: countTo
+      }, {
+        duration: 3000,
+        easing:'linear',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum);
+        }
+      });  
+    });
+  }
+});
