@@ -1,6 +1,7 @@
 /*---=== General ===---*/
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -183,10 +184,38 @@ header nav .form-inline .row .col-9 .num {
   animation: pulse 1.5s infinite;
 }
 
+.home .hero-body .hero-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .home .hero-body .hero-right img {
   width: 500px;
   margin-bottom: -10px;
-  animation: float 1.5s infinite;
+}
+.home .hero-body .hero-right .parallax-icon {
+  position: absolute;
+  width: 150px !important;
+}
+.home .hero-body .hero-right .parallax-icon-1 {
+  margin-right: 400px;
+  margin-top: 100px;
+}
+.home .hero-body .hero-right .parallax-icon-2 {
+  margin-left: 400px;
+  margin-bottom: 100px;
+}
+.home .hero-body .hero-right .parallax-icon-3 {
+  margin-bottom: 250px;
+  margin-right: 100px;
+}
+.home .hero-body .hero-right .parallax-icon-4 {
+  margin-top: 350px;
+  margin-left: 100px;
+}
+.home .hero-body .hero-right .parallax-icon-5 {
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 @keyframes pulse {
@@ -472,6 +501,78 @@ header nav .form-inline .row .col-9 .num {
   }
 }
 
+/*---=== Why Need Section ===---*/
+
+.why-need-section ul {
+  list-style: none;
+}
+.why-need-section ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -40px;
+}
+.why-need-section ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration:none;
+  color:#444;
+  background:rgb(204, 255, 252);
+  height:10em;
+  width:10em;
+  padding:1em;
+  margin: 1.5rem !important;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.397);
+  transform: rotate(-6deg);
+  transition: transform .2s linear;
+}
+.why-need-section h4 {
+  font-family: 'Schoolbell', cursive;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.why-need-section ul li:nth-child(2), .why-need-section ul li:nth-child(6), .why-need-section ul li:nth-child(10) {
+  
+  background:rgb(186, 230, 255);
+}
+.why-need-section ul li:nth-child(3), .why-need-section ul li:nth-child(7), .why-need-section ul li:nth-child(11) {
+  background:rgb(219, 216, 247);
+}
+.why-need-section ul li:nth-child(2n) {
+  transform:rotate(3deg);
+  position:relative;
+  top:-5px;
+}
+.why-need-section ul li:nth-child(3n) {
+  transform:rotate(-3deg);
+  position:relative;
+  top:5px;
+}
+
+.why-need-section ul li:nth-child(5n) {
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+.why-need-section ul li:nth-child(4), .why-need-section ul li:nth-child(8), .why-need-section ul li:nth-child(12) {
+  background:rgb(184, 201, 238);
+  
+}
+
+.why-need-section ul li:hover {
+  box-shadow:10px 10px 7px rgba(0, 0, 0, 0.507);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+.why-need-section ul li{
+  margin:1em;
+}
+
 /*---=== Industry Section ===---*/
 .industry-section {
   background-color: rgb(238, 245, 248);
@@ -524,6 +625,7 @@ header nav .form-inline .row .col-9 .num {
   text-align: center;
   font-weight: 600;
   color: white;
+  font-size: 35px;
 }
 .stats-section .row .stats img {
   filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(314deg) brightness(113%) contrast(101%);
@@ -563,3 +665,4 @@ header nav .form-inline .row .col-9 .num {
     font-size: 12px;
   }
 }
+
