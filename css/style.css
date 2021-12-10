@@ -517,12 +517,11 @@ header nav .form-inline .row .col-9 .num {
   background: url(../images/stats-bg.png);
   background-position: center;
   background-size: cover;
-  height: 300px;
+  min-height: 300px;
   padding-top: 25px;
 }
 .stats-section .row .stats {
   text-align: center;
-  font-size: 35px;
   font-weight: 600;
   color: white;
 }
@@ -537,4 +536,30 @@ header nav .form-inline .row .col-9 .num {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .stats-section {
+    min-height: 350px;
+    padding: 25px 0;
+  }
+  .stats-section .row .stats {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .stats-section {
+    min-height: 350px;
+    padding: 25px 0;
+  }
+  .stats-section .row .stats {
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .stats-section .row .stats img {
+    width: 50px;
+  }
+  .stats-section .row .stats h5 {
+    font-size: 12px;
+  }
 }
