@@ -6,6 +6,7 @@ AOS.init();
 $(window).scroll(function() {
   if ($(window).scrollTop() > 47) {
     $(".navbar").addClass("navbar-bg");
+    $("header .navbar-brand img").attr("src", "images/logo.png");
     $("header .nav-link").css("color", "#333");
     $("header .col-3").css("color", "rgb(9, 88, 236)");
     $("header .col-9").css("color", "#666");
@@ -13,6 +14,7 @@ $(window).scroll(function() {
   }
   else if ($(window).scrollTop() < 47 && $(window).width() > 992) {
     $(".navbar").removeClass("navbar-bg");
+    $("header .navbar-brand img").attr("src", "images/logo-white.png");
     $("header .nav-link").css("color", "#fff");
     $("header .col-3").css("color", "rgb(105, 189, 245)");
     $("header .col-9").css("color", "#ccc");
